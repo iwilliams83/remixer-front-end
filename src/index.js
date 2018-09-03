@@ -63,7 +63,7 @@ function setup() {
 function draw() {}
 
 function getSongs(){
-	fetch('http://localhost:3000/api/v1/songs').then(res => res.json())
+	fetch('https://powerful-retreat-90633.herokuapp.com/api/v1/songs').then(res => res.json())
 	.then(songs => addToList(songs))
 }
 
@@ -129,7 +129,7 @@ function clickHandler(e) {
 		//requires na me of song, artist name, song data
 		let artistName = document.querySelector('#artistName').value;
 		let songTitle = document.querySelector('#songTitle').value;
-		fetch('http://localhost:3000/api/v1/songs', {
+		fetch('https://powerful-retreat-90633.herokuapp.com/api/v1/songs', {
 			method: 'POST',
 			headers: {'Accept': 'application/json',
       				  'Content-Type': 'application/json'},
